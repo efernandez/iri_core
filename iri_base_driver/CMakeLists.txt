@@ -12,9 +12,9 @@ find_package(catkin REQUIRED)
 # find_package(Boost REQUIRED COMPONENTS system)
 
 # edit the following line to add all the source code files of the library
-SET(sources ./src/iri_base_driver.cpp)
+SET(sources src/iri_base_driver.cpp)
 # edit the following line to add all the header files of the library
-SET(headers ./include/iri_base_driver.h ./include/iri_base_driver_node.h)
+SET(headers include/${PROJECT_NAME}/iri_base_driver.h include/${PROJECT_NAME}/iri_base_driver_node.h)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -82,7 +82,7 @@ SET(headers ./include/iri_base_driver.h ./include/iri_base_driver_node.h)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS ${headers} 
+  INCLUDE_DIRS include
 #  LIBRARIES foo
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
@@ -95,7 +95,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
-INCLUDE_DIRECTORIES(${headers})
+INCLUDE_DIRECTORIES(include)
 
 ## Declare a cpp library
 # add_library(foo

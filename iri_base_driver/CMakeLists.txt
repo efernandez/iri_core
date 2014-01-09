@@ -11,11 +11,6 @@ find_package(catkin REQUIRED)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
-# edit the following line to add all the source code files of the library
-SET(sources src/iri_base_driver.cpp)
-# edit the following line to add all the header files of the library
-SET(headers include/${PROJECT_NAME}/iri_base_driver.h include/${PROJECT_NAME}/iri_base_driver_node.h)
-
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
@@ -83,8 +78,8 @@ SET(headers include/${PROJECT_NAME}/iri_base_driver.h include/${PROJECT_NAME}/ir
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-#  LIBRARIES foo
-#  CATKIN_DEPENDS other_catkin_pkg
+  LIBRARIES ${PROJECT_NAME}
+  CATKIN_DEPENDS roscpp driver_base dynamic_reconfigure
 #  DEPENDS system_lib
 )
 
@@ -101,7 +96,7 @@ INCLUDE_DIRECTORIES(include)
 # add_library(foo
 #   src/${PROJECT_NAME}/foo.cpp
 # )
-add_library(${PROJECT_NAME} ${sources})
+add_library(${PROJECT_NAME} src/iri_base_driver.cpp)
 
 ## Declare a cpp executable
 # add_executable(foo_node src/foo_node.cpp)

@@ -47,7 +47,3 @@
   <buildtool_depend>catkin</buildtool_depend>
 
 </package>
-
-  <depend package="diagnostic_updater"/>
-
-

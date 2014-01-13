@@ -77,7 +77,7 @@ find_package(catkin REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS roscpp driver_base dynamic_reconfigure
+  CATKIN_DEPENDS roscpp dynamic_reconfigure diagnostic_updater
 #  DEPENDS system_lib
 )
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(iri_base_driver)
+project(iri_base_algorithm)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -88,13 +88,11 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
-INCLUDE_DIRECTORIES(include)
 
 ## Declare a cpp library
 # add_library(foo
 #   src/${PROJECT_NAME}/foo.cpp
 # )
-add_library(${PROJECT_NAME} src/iri_base_driver.cpp)
 
 ## Declare a cpp executable
 # add_executable(foo_node src/foo_node.cpp)
@@ -128,11 +126,6 @@ add_library(${PROJECT_NAME} src/iri_base_driver.cpp)
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
-install(TARGETS ${PROJECT_NAME}
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
@@ -140,11 +133,6 @@ install(TARGETS ${PROJECT_NAME}
 #   FILES_MATCHING PATTERN "*.h"
 #   PATTERN ".svn" EXCLUDE
 # )
-install(DIRECTORY include/
-  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-  FILES_MATCHING PATTERN "*.h"
-  PATTERN ".svn" EXCLUDE
-)
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES

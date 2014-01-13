@@ -76,7 +76,7 @@ find_package(catkin REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES ${PROJECT_NAME}
+#  LIBRARIES ${PROJECT_NAME}
   CATKIN_DEPENDS roscpp dynamic_reconfigure diagnostic_updater
 #  DEPENDS system_lib
 )
@@ -93,6 +93,8 @@ catkin_package(
 # add_library(foo
 #   src/${PROJECT_NAME}/foo.cpp
 # )
+add_library(${PROJECT_NAME} include/${PROJECT_NAME}/iri_base_algorithm.h)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 ## Declare a cpp executable
 # add_executable(foo_node src/foo_node.cpp)

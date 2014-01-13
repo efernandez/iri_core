@@ -33,9 +33,9 @@
   <!-- Dependencies can be catkin packages or system dependencies -->
   <!-- Examples: -->
   <!-- Use build_depend for packages you need at compile time: -->
-  <build_depend>roscpp</build_depend>
+<!--  <build_depend>roscpp</build_depend>
   <build_depend>dynamic_reconfigure</build_depend>
-  <build_depend>diagnostic_updater</build_depend>
+  <build_depend>diagnostic_updater</build_depend>-->
   <!-- Use buildtool_depend for build tool packages: -->
   <!--   <buildtool_depend>catkin</buildtool_depend> -->
   <!-- Use run_depend for packages you need at runtime: -->
@@ -45,5 +45,4 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-
 </package>

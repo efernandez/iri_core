@@ -37,6 +37,8 @@
   <!--   <buildtool_depend>catkin</buildtool_depend> -->
   <!-- Use run_depend for packages you need at runtime: -->
   <run_depend>iri_base_driver</run_depend>
+  <run_depend>iri_base_algorithm</run_depend>
+  <run_depend>iri_action_server</run_depend>
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
